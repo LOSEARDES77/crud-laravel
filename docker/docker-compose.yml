@@ -3,6 +3,7 @@ services:
     image: mysql
     volumes:
       - mysql:/var/lib/mysql
+      - database.sql:/docker-entrypoint-initdb.d/database.sql
     environment:
       - MYSQL_USER=${DB_USERNAME}
       - MYSQL_PASSWORD=${DB_PASSWORD}
